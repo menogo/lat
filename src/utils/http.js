@@ -48,7 +48,7 @@ service.interceptors.request.use(
 
     // 发起 Loading
     loading = weui.loading('加载中...')
-    console.log('before send =>', config)
+    // console.log('before send =>', config)
 
     return config
   },
@@ -60,6 +60,7 @@ service.interceptors.request.use(
 )
 
 // response 拦截器
+// 请求完成关掉 Loading
 service.interceptors.response.use(
   response => {
     // 数据响应之后，要做的业务

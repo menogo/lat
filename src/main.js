@@ -11,7 +11,7 @@ const FastClick = require('fastclick')
 
 Vue.config.productionTip = false
 
-// 移动端点击延迟
+// 去除移动端点击延迟
 FastClick.attach(document.body)
 
 // 基于Axios封装的请求

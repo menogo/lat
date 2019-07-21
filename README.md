@@ -9,7 +9,7 @@ yarn install
 ### 开发
 
 ```
-# 热更新开发模式
+# 本地开发模式
 yarn run serve
 
 # 起Mock服务

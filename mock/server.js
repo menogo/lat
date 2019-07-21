@@ -1,15 +1,3 @@
-// const jsonServer = require('json-server')
-// const server = jsonServer.create()
-// const router = jsonServer.router(require('./db.js')())
-// const middlewares = jsonServer.defaults()
-
-// server.use(middlewares)
-// server.use(router)
-
-// server.listen(3000, function() {
-//   console.log('JSON Server is running at: http://127.0.0.1:3000/')
-// })
-
 const path = require('path')
 const chalk = require('chalk')
 const jsonServer = require('json-server')
