@@ -5,24 +5,51 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "mock": "nodemon ./mock/server.js",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:development": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
+    "build:production": "vue-cli-service build --mode production",
+    "build:stag": "vue-cli-service build --mode staging",
+    "build:staging": "vue-cli-service build --mode staging",
+    "dev": "run-s tab:serve tab:mock open:page",
+    "tab:serve": "ttab -t 'Dev Server' npm run serve",
+    "tab:mock": "ttab -t 'Mock Server' npm run mock",
+    "open:page": "open 'http://localhost:8080'",
+    "deploy:local": "serve -s ./dist"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "fastclick": "^1.0.6",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "weui": "^2.0.1",
+    "weui.js": "^1.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "chalk": "^2.4.2",
     "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.15.0",
     "node-sass": "^4.9.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
+    "serve": "^11.1.0",
+    "ttab": "^0.6.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
